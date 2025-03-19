@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Barriecito&family=Covered+By+Your+Grace&family=Hanalei&family=Rubik+Iso&display=swap");
 
 * {
   padding: 0;
@@ -22,6 +23,8 @@ body {
   color: white;
   font-size: 20px;
   background-color: #282a56;
+  background-image: url("https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  /* background-size: 100% 100%; */
 }
 
 .container {
@@ -46,259 +49,738 @@ body {
   justify-content: center;
   max-width: 90px;
   max-height: 90px;
-  border: 6px solid grey;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  /* border: 6px solid grey; */
+  box-shadow: 0 0 10px 10px rgba(236, 228, 228, 0.545),
+    inset 0 0 5px 1px rgba(0, 0, 0, 0.463);
   transition: all 0.8s ease-in-out;
 }
 
-/* Sample CSS for the WHY word */
+/* ======================================== */
+/* 2nd same letter in word grouping */
+span[class*="Two"] {
+  background-color: rgb(38, 37, 37);
+  text-transform: uppercase;
+  text-decoration: line-through;
+  text-shadow: 2px 5px 4px rgb(255, 145, 209);
+  border-radius: 32px 0px 12px 36px;
+}
 
-.whyWLetter {
-  font-size: 72px;
+/* Global styling for each letter */
+span[class*="ALetter"] {
+  font-size: 62px;
+  font-weight: lighter;
+  border-radius: 34px 25px 35px 44px;
+  font-family: "Rubik Iso", sans-serif;
+}
+/* B and K */
+span[class*="BLetter"],
+[class*="KLetter"] {
+  font-size: 45px;
+  font-weight: bolder;
+  text-shadow: 6px 6px 5px red;
+}
+span[class*="DLetter"] {
+  border-radius: 5px 45px 22px 10px;
+  font-size: 60px;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+/* E letters that do not have multiple E's in one word */
+span:not([class*="Two"], [class*="three"])[class*="ELetter"] {
+  border: 4px dashed green;
+  font-family: "Covered By Your Grace", sans-serif;
+  font-size: 66px;
+}
+span[class*="FLetter"] {
+  border-radius: 8px;
+  border-top: 10px solid silver;
+  border-right: 10px solid silver;
+  font-family: "Bangers", sans-serif;
+  text-transform: capitalize;
+  font-size: 50px;
+  text-decoration: overline line-through;
+}
+span[class*="HLetter"] {
+  border-radius: 10px 12px 25px;
+  font-family: "Bangers", sans-serif;
+  font-weight: 400;
+  text-shadow: 4px 4px 6px black;
+}
+span[class*="ILetter"] {
+  border-radius: 31px 1px 31px 0px;
+  text-transform: capitalize;
+  text-decoration: overline underline;
+  font-family: "Ceviche One", sans-serif;
+}
+/*                     */
+/* "KLetter" at line76 */
+/*                    */
+span:not([class*="Two"], [class*="three"])[class*="N"] {
+  font-size: 53px;
+  text-shadow: 9px 3px 4px turquoise;
+  font-family: "Bangers", sans-serif;
+}
+span[class*="OLetter"] {
+  text-shadow: 3px 2px 6px green;
+  font-family: "Piazolla", sans-serif;
+  font-weight: bolder;
+}
+span[class*="PLetter"] {
+  color: orangered;
+  font-size: 35px;
+  font-style: italic;
+}
+span[class*="RLetter"] {
+  border-radius: 14px 14px 44px 44px;
+  border-bottom: 12px dashed silver;
+  font-size: 81px;
+  text-transform: capitalize;
+  font-family: "Covered By Your Grace", sans-serif;
+}
+span[class*="TLetter"] {
+  border-radius: 7px 25px;
+  border-top: 19px solid grey;
+  font-family: "Raleway Dots", sans-serif;
+}
+
+/* Sample CSS for the WHY word */
+span[class*="WLetter"] {
+  border-radius: 11px 44px;
+  font-size: 55px;
+  font-family: "Piazolla", sans-serif;
   font-weight: bold;
+}
+span[class*="YLetter"] {
+  border-radius: 10px 34px 40px 22px;
+  font-size: 33px;
+  font-family: "Raleway Dots", sans-serif;
+  font-style: oblique;
+  font-weight: 900;
+}
+
+/*  Why word    */
+.whyWLetter {
+  border-top: 3px solid brown;
+  border-right: 5px solid brown;
   color: aqua;
   text-decoration: underline;
   text-transform: uppercase;
-  font-family: 'Piazolla', sans-serif;
+  background-color: green;
 }
-
 .whyHLetter {
-  font-size: 30px;
-  font-weight: bold;
-  color: darkgoldenrod;
-  text-decoration: overline;
+  color: purple;
+  background-color: turquoise;
+  border-bottom: 7px solid white;
+  font-size: 55px;
   text-transform: lowercase;
-  font-family: 'Ceviche One', sans-serif;
 }
-
 .whyYLetter {
   font-size: 60px;
   font-weight: normal;
   color: coral;
+  background-color: blue;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Raleway Dots', sans-serif;
+  text-decoration: wavy;
+  font-family: "Raleway Dots", sans-serif;
 }
 
-/* DID word */
-
+/*     DID word        */
 .didDLetter {
+  color: rgb(255, 0, 149);
+  background-color: blueviolet;
+  text-shadow: 3px 7px 7px rgb(0, 166, 255);
 }
-
 .didILetter {
+  color: plum;
+  background-color: lavenderblush;
+  font-size: 32px;
 }
-
 .didDTwoLetter {
+  color: orange;
+  border-bottom: 9px solid gray;
+  border-right: 9px solid gray;
 }
 
-/* THE word */
-
+/*       THE word        */
 .theTLetter {
+  color: #00089b;
+  background-color: rgb(167, 245, 49);
+  text-transform: lowercase;
+  font-weight: 900;
+  font-size: 32px;
 }
-
 .theHLetter {
+  color: chocolate;
+  background-color: rgb(45, 149, 90);
+  font-size: 46px;
 }
-
 .theELetter {
+  color: gold;
+  background-color: gray;
+  text-transform: uppercase;
+  border-radius: 22px 9px 9px 22px;
 }
 
-/* FRONT-END word */
-
+/*    FRONTEND word            */
 .frontendFLetter {
+  color: skyblue;
+  background-color: violet;
+  border: 4px dashed turquoise;
 }
-
 .frontendRLetter {
+  color: silver;
+  background-color: gold;
+  text-shadow: 6px 5px 48px brown;
 }
-
 .frontendOLetter {
+  color: purple;
+  background-color: rgb(218, 141, 218);
+  border-radius: 21px 14px;
+  border-top: 12px dashed green;
 }
-
 .frontendNLetter {
+  color: cadetblue;
+  background-color: darkolivegreen;
+  border-right: 12px solid darkgray;
+  border-top: 9px solid darkgray;
+  border-radius: 2px 5px 4px 44px;
 }
-
 .frontendTLetter {
+  color: fuchsia;
+  font-size: 17px;
+  font-weight: 900;
+  background-color: rgb(144, 241, 144);
 }
-
 .frontendELetter {
+  color: lawngreen;
+  background-color: #282a56;
 }
-
 .frontendNTwoLetter {
+  color: blue;
+  font-size: 72px;
+  border-top: 18px solid purple;
+  text-transform: uppercase;
 }
-
 .frontendDLetter {
+  color: mediumorchid;
+  background-color: mediumseagreen;
+  border: 4px solid pink;
 }
 
-/* DEVELOPER word */
-
+/*  DEVELOPER word            */
 .developerDLetter {
+  background-color: red;
+  color: black;
+  text-shadow: 3px 3px 6px silver;
 }
 .developerELetter {
+  color: blue;
+  background-color: silver;
+  text-decoration: underline;
+  border-radius: 5px 22px 44px 15px;
 }
 .developerVLetter {
+  color: yellow;
+  text-transform: lowercase;
+  background-color: sienna;
+  border-bottom: 15px solid wheat;
+  border-left: 15px solid wheat;
 }
 .developerETwoLetter {
+  font-size: 44px;
+  color: rgb(153, 39, 153);
+  font-weight: 900;
 }
 .developerLLetter {
+  font-size: 33px;
+  color: yellow;
+  background-color: darkblue;
+  text-shadow: 2px 5px 5px orange;
+  border-left: 14px dotted turquoise;
 }
 .developerOLetter {
+  color: darkgoldenrod;
+  background-color: darkorchid;
+  border-bottom: 22px solid navy;
 }
 .developerPLetter {
+  background-color: aquamarine;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 22px dotted green;
 }
 .developerEThreeLetter {
+  color: purple;
+  background-color: yellow;
+  border: 15px solid orangered;
+  border-radius: 45px 22px 45px 22px;
+  text-shadow: 4px 8px 12px red;
+  text-transform: uppercase;
+  font-size: 33px;
 }
 .developerRLetter {
+  color: red;
+  background-color: black;
+  text-shadow: 3px 6px 4px grey;
 }
 
-/* TAKE word */
-
+/*        TAKE word */
 .takeTLetter {
+  font-size: 55px;
+  color: gray;
+  background-color: darkkhaki;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 1px 1px 8px rgb(19, 12, 12);
 }
 .takeALetter {
+  color: green;
+  background-color: darkgray;
+  border-left: 9px solid red;
 }
 .takeKLetter {
+  background-color: darkorange;
+  border-radius: 44px 62px 22px 25px;
+  border-bottom: 16px solid darkred;
 }
 .takeELetter {
+  color: magenta;
+  background-color: darkcyan;
+  text-transform: capitalize;
+  border-radius: 44px 44px 44px 44px;
+  font-weight: lighter;
+  text-shadow: 1px -5px 5px darkorange;
 }
 
 /* UP word */
 
 .upULetter {
+  font-size: 34px;
+  font-weight: bolder;
+  color: navajowhite;
+  background-color: navy;
+  border: 11px ridge brown;
+  font-family: "Raleway Dots", sans-serif;
 }
 .upPLetter {
+  font-size: 34px;
+  font-weight: bolder;
+  color: rgb(139, 0, 203);
+  background-color: rgb(134, 0, 0);
+  border-bottom: 11px solid rgb(20, 203, 0);
+  border-radius: 33px 22px 40px 40px;
+  font-family: "Bangers", sans-serif;
 }
 
 /* GARDENING word */
 
 .gardeningGLetter {
+  font-size: 44px;
+  color: rgb(0, 203, 71);
+  background-color: rgb(94, 0, 245);
+  border-bottom: 7px solid black;
+  border-top: 7px solid black;
+  border-radius: 22px;
+  font-family: "Ceviche One", sans-serif;
 }
-.gardeningALetter {
+:root .gardeningALetter {
+  color: deeppink;
+  background-color: darkmagenta;
+  font-size: 16px;
+  font-style: oblique;
+  text-transform: capitalize;
+  text-shadow: -4px 2px 5px rgb(255, 166, 214);
 }
 .gardeningRLetter {
+  color: paleturquoise;
+  background-color: palevioletred;
+  text-shadow: -3px 3px 5px lightgreen;
+  border-top: 5px dashed lightgreen;
 }
 .gardeningDLetter {
+  color: deepskyblue;
+  background-color: darkgreen;
+  border: 14px dashed brown;
 }
 .gardeningELetter {
+  color: black;
+  background-color: green;
+  text-decoration: overline;
+  text-decoration-color: green;
+  font-style: italic;
+  border-radius: 31px;
 }
 .gardeningNLetter {
+  color: rgb(29, 173, 0);
+  background-color: rgb(255, 119, 0);
+  text-decoration: overline underline;
+  font-style: normal;
+  font-weight: 900;
+  border-radius: 11px;
 }
 .gardeningILetter {
+  color: darkred;
+  background-color: darkorchid;
+  font-size: 55px;
+  font-style: oblique;
+  font-weight: bolder;
+  border: 11px dashed palevioletred;
 }
 .gardeningNTwoLetter {
+  color: deeppink;
+  border: 16px solid purple;
+  font-size: 39px;
 }
 .gardeningGTwoLetter {
+  color: darkgoldenrod;
+  border-top: 10px solid red;
+  border-right: 10px solid red;
+  font-size: 23px;
 }
 
 /* BECAUSE word */
 
 .becauseBLetter {
+  color: black;
+  background-color: darkgoldenrod;
+  text-transform: capitalize;
+  font-family: "Piazolla", sans-serif;
+  border: 6px solid white;
 }
 .becauseELetter {
+  color: rgb(255, 0, 0);
+  background-color: rgb(195, 255, 0);
+  text-decoration: line-through;
+  text-transform: capitalize;
+  font-style: italic;
+  border-radius: 31px;
 }
 .becauseCLetter {
+  color: gray;
+  background-color: #00089b;
+  border-radius: 33px 12px 33px 33px;
+  border-top: 19px solid white;
+  text-decoration-line: overline;
+  text-decoration-color: green;
+  font-size: 66px;
 }
 .becauseALetter {
+  color: green;
+  background-color: orange;
+  text-transform: capitalize;
+  border: 5px dashed green;
+  text-shadow: -2px -2px 7px red, 3px 3px 5px rgb(93, 0, 255);
 }
 .becauseULetter {
+  color: rgb(111, 106, 180);
+  background-color: rgb(113, 138, 73);
+  font-size: 39px;
+  border-top: 4px dashed gold;
+  border-left: 9px solid gold;
+  border-radius: 1px 12px 21px 10px;
+  text-shadow: 1px 1px 4px silver;
+  font-family: "Barriecito", system-ui;
 }
 .becauseSLetter {
+  color: darkmagenta;
+  background-color: darkkhaki;
+  font-size: 39px;
+  border-radius: 1px 21px;
+  text-shadow: 3px 5px 7px brown, -3px -5px 4px brown;
+  font-family: "Barriecito", system-ui;
 }
 .becauseETwoLetter {
+  color: mediumspringgreen;
+  background-color: tomato;
+  font-size: 72px;
+  font-style: oblique;
 }
 
 /* THEY word */
 
 .theyTLetter {
+  color: purple;
+  background-color: aqua;
+  font-weight: 900;
+  font-size: 50px;
 }
 .theyHLetter {
+  color: silver;
+  background-color: mediumvioletred;
+  border: 2px solid teal;
 }
-.theyELetter {
+*.theyELetter {
+  color: darkcyan;
+  background-color: maroon;
+  text-transform: uppercase;
 }
 .theyYLetter {
+  color: goldenrod;
+  background-color: aqua;
+  text-transform: uppercase;
+  text-decoration: underline;
+  border-left: 5px solid greenyellow;
 }
 
 /* WANTED word */
 
 .wantedWLetter {
+  color: limegreen;
+  background-color: salmon;
+  border-top: 4px solid darkgreen;
+  text-decoration: overline underline;
+  text-decoration-color: yellow;
 }
-.wantedALetter {
+:root .wantedALetter {
+  color: rebeccapurple;
+  background-color: darkkhaki;
+  border: 5px solid violet;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px black;
+  font-size: 12px;
 }
 .wantedNLetter {
+  color: powderblue;
+  background-color: rgb(0, 193, 193);
+  border-radius: 32px 20px;
+  border-top: 6px dashed olivedrab;
 }
 .wantedTLetter {
+  color: lightsalmon;
+  background-color: black;
+  font-weight: 900;
+  font-style: oblique;
+  font-size: 29px;
 }
 .wantedELetter {
+  color: cornflowerblue;
+  background-color: silver;
 }
 .wantedDLetter {
+  color: navy;
+  background-color: seagreen;
+  border-left: 14px solid red;
 }
 
 /* TO word */
 
 .toTLetter {
+  color: crimson;
+  background-color: rgb(26, 255, 0);
+  font-size: 65px;
+  font-weight: 800;
 }
 .toOLetter {
+  color: rgb(201, 93, 131);
+  background-color: darkgray;
+  border: 5px solid black;
+  font-style: oblique;
+  font-weight: 500;
 }
 
 /* IMPROVE word */
 
 .improveILetter {
+  color: orange;
+  background-color: green;
+  border-top: 9px solid lightgreen;
+  border-left: 7px solid rgb(123, 209, 123);
+  font-size: 68px;
 }
 .improveMLetter {
+  color: rgb(255, 0, 179);
+  background-color: rgb(58, 33, 79);
+  border-top: 9px solid rgb(104, 65, 171);
+  border-left: 7px solid rgb(71, 0, 214);
+  text-decoration: underline;
+  text-decoration-color: aquamarine;
+  font-style: oblique;
+  font-size: 38px;
 }
 .improvePLetter {
+  text-transform: capitalize;
+  background-color: blanchedalmond;
+  border-bottom: 24px solid white;
+  border-radius: 23px 2px 2px;
 }
 .improveRLetter {
+  color: rgb(0, 6, 50);
+  background-color: powderblue;
+  text-decoration: line-through;
+  text-shadow: 3px 3px 4px pink;
 }
-.improveOLetter {
+:root .improveOLetter {
+  text-shadow: 3px 4px 5px red;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.912);
+  background-color: slateblue;
+  border: 12px solid rgba(0, 0, 0, 0.39);
+  text-transform: capitalize;
 }
-.improveVLetter {
+:root .improveVLetter {
+  color: yellow;
+  background-color: rgb(0, 0, 0);
+  border: 9px double lightsalmon;
+  font-size: 39px;
+  font-weight: 300;
+  text-shadow: 2px 2px 12px rgb(0, 255, 76);
+  box-shadow: inset 0px 0px 50px rgb(0, 216, 97), 0 0 0 2px white;
+  text-decoration: underline;
+  text-decoration-color: orange;
 }
-.improveELetter {
+:root .improveELetter {
+  font-family: "Bangers";
+  color: darkred;
+  background-color: darkcyan;
+  border: 12px solid red;
 }
 
 /* THEIR word */
 
-.theirTLetter {
+:root .theirTLetter {
+  color: goldenrod;
+  background-color: teal;
+  border-radius: 20px 40px 20px 20px;
+  border-left: 22px solid grey;
+  font-size: 65px;
+  font-weight: 900;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
 }
-.theirHLetter {
+:root .theirHLetter {
+  color: violet;
+  background-color: rgba(0, 0, 0, 0.727);
+  border: 6px solid pink;
+  border-radius: 31px;
+  box-shadow: inset 2px 2px 20px violet;
+  text-shadow: 1px 1px 5px rgb(255, 172, 226);
 }
-.theirELetter {
+:root .theirELetter {
+  text-transform: capitalize;
+  color: rgba(255, 0, 0, 0.392);
+  box-shadow: inset 0px 0px 18px rgb(0, 255, 255);
+  background-image: radial-gradient(darkblue, green);
+  text-shadow: 1px 0px 6px rgb(0, 255, 64), 0px 1px 4px rgb(255, 0, 111);
 }
-.theirILetter {
+:root .theirILetter {
+  border-radius: 26px 18px;
+  color: darkmagenta;
+  background-color: lightskyblue;
+  font-size: 58px;
+  font-weight: 200;
+  text-decoration-style: wavy;
+  text-decoration-thickness: from-font;
 }
-.theirRLetter {
+:root .theirRLetter {
+  color: slateblue;
+  background-image: radial-gradient(
+    rgba(0, 251, 255, 0.378),
+    rgba(0, 128, 0, 0)
+  );
+  background-color: saddlebrown;
+  font-family: "Barriecito", sans-serif;
+  text-transform: lowercase;
+  text-shadow: 2px 1px 6px teal, 2px 5px 6px rgb(29, 0, 109), 3px 6px 23px black;
+  border-bottom: 4px solid green;
 }
 
 /* ROOT word */
 
-.rootRLetter {
+:root .rootRLetter {
+  background-color: gray;
+  color: hotpink;
+  border: 4px solid green;
+  border-radius: 45px 1px;
 }
 .rootOLetter {
+  color: red;
+  background-color: seagreen;
+  border-radius: 22px 45px 13px 9px;
 }
-.rootOTwoLetter {
+:root .rootOTwoLetter {
+  color: palevioletred;
+  text-decoration-color: purple;
+  box-shadow: inset 6px 6px 18px purple, inset 0 0 7px 6px pink;
 }
-.rootTLetter {
+:root .rootTLetter {
+  color: rgb(0, 187, 255);
+  background-color: red;
+  text-transform: capitalize;
+  text-shadow: 3px 1px 2px rgb(0, 0, 0);
+  font-size: 28px;
+  font-weight: 600;
 }
 
 /* SKILLS word */
 
-.skillsSLetter {
+:root .skillsSLetter {
+  color: rgba(192, 192, 192, 0.351);
+  text-transform: capitalize;
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 19px;
+  background-color: grey;
+  text-shadow: 1px -1px 2px rgba(12, 13, 5, 0.836), 1px 1px 1px white;
+  box-shadow: 0 0 10px 10px rgba(236, 228, 228, 0.545),
+    inset -1px 1px 15px 4px rgba(255, 255, 255, 0.867);
 }
 .skillsKLetter {
+  border-radius: 0 32px 0 0;
+  border: 3px solid red;
+  background-color: lightseagreen;
 }
-.skillsILetter {
+:root .skillsILetter {
+  color: orangered;
+  background-color: rgb(143, 109, 86);
+  border-radius: 21px 14px;
+  font-family: "Ceviche", sans-serif;
+  font-size: 22px;
+  text-shadow: 3px 2px 7px lightsalmon;
+  text-transform: capitalize;
 }
 .skillsLLetter {
+  color: rgb(159, 255, 200);
+  background-color: slateblue;
+  text-transform: capitalize;
 }
 .skillsLTwoLetter {
+  color: hotpink;
 }
-.skillsSTwoLetter {
+:root .skillsSTwoLetter {
+  font-size: 16px;
+  color: aquamarine;
+  border-radius: 23px 12px;
+  box-shadow: inset -1px 1px 15px 5px aquamarine;
 }
 
 /* SYMBOLS */
 
 .hyphen {
+  color: rgba(250, 235, 215, 0);
+  font-size: 42px;
+  text-decoration: line-through;
+  text-decoration-style: wavy;
+  text-decoration-thickness: from-font;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  text-decoration-color: rgb(0, 255, 242);
+  background-color: orangered;
 }
-.exclamation-mark {
+:root .exclamation-mark {
+  background: border-box
+    linear-gradient(90deg, red 25%, rgb(255, 255, 255) 50%, blue 100%);
+  color: blue;
+  font-family: "Bangers", sans-serif;
+  font-size: 48px;
+  text-shadow: 4px -1px 8px red, -4px 1px 8px blue;
+  border-radius: 20% 20% 0 0;
+  border-top: 12px ridge rgb(149, 149, 149);
+  box-shadow: 0px -1px 1px black;
 }
 .question-mark {
+  color: rgba(255, 0, 0, 0.748);
+  background-color: lightslategrey;
+  font-size: 57px;
+  text-shadow: 2px 1px 2px black, 2px -4px 8px black,
+    -1px -1px 1px rgba(255, 255, 255, 0.722);
+  border: 2px solid #00089b;
 }
